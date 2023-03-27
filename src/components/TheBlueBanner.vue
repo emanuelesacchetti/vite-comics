@@ -1,6 +1,6 @@
 <script>
     export default {
-        TheBlueBanner
+        name: 'TheBlueBanner'
     }
 </script>
 
