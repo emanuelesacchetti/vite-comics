@@ -16,12 +16,18 @@
 
 <template>
   <TheHeader></TheHeader>
+  <main></main>
   <TheBlueBanner></TheBlueBanner>
   <TheFooter></TheFooter>
   <TheBlackBanner></TheBlackBanner>
 </template>
 
-<style lang="scss" scoped>
-  @use "./styles/general.scss";
-  
+<style lang="scss">
+  @use './styles/general.scss';
+
+ 
+  main {
+    height: calc(100vh - (250px + 70px + 70px));
+    width: 100%;
+  }
 </style>

@@ -26,13 +26,10 @@
     </header>
 </template>
 
-<style  lang="scss">
+<style  lang="scss" scoped>
+    @use '../styles/general.scss';
     @use '../styles/partials/mixins';
-    body {
-        padding:0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+    
     header {
         background-color: antiquewhite;
         height: 70px;
@@ -60,19 +57,20 @@
         height: 100%;
         margin: 0;
     }
-    ul li {
+    nav ul li {
         padding: 0 10px;
-        height: 97%;
+        height: 100%;
         display: flex;
         align-items: center;
         border-bottom: 3px solid antiquewhite;
     }
-    ul li:hover {
+    nav ul li:hover {
         border-bottom: 3px solid blue;
-    } li:hover a {
+    } 
+    nav li:hover a {
         color: blue;
     }
-    li a {
+    nav li a {
         text-decoration: none;
         color: black;
     }
