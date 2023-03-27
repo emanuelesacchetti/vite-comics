@@ -1,6 +1,30 @@
 <script>
     export default {
-        name: 'TheFooter'
+        name: 'TheFooter',
+        data(){
+            return {
+                comics: [
+                    'Characters',
+                    'Comics','Movie',
+                    'TV','Games',
+                    'Videos','News'
+                ],
+                shop: ['Shop DC','Shop DC Collectibles'],
+                dc: ['Terms Of Use',
+                    'Privacy policy(new)',
+                    'Ad choices',
+                    'Advertising',
+                    'jobs','Subscriptions',
+                    'Talent Workshops',
+                    'Rating','Shop Help',
+                    'Contact us'
+                    ],
+                sites: ['DC','MAD magazine',
+                        'DC Kids','DC Universe',
+                        'DC Power Visa'
+                    ]
+            }
+        }
     }
 </script>
 
@@ -10,38 +34,32 @@
             <div class="links">
                 <div>
                     <ul>
-                        <li class="title-list"><a href="#">titolo</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
+                        <div class="title-list">DC COMICS</div>
+                        <li v-for="link in comics">
+                            <a href="#">{{ link }}</a>
+                        </li>
                     </ul>
                     <ul>
-                        <li class="title-list"><a href="#">titolo</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
+                        <div class="title-list">SHOP</div>
+                        <li v-for="link in shop">
+                            <a href="#">{{link}}</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li class="title-list"><a href="#">titolo</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
+                        <div class="title-list">DC</div>
+                        <li v-for="link in dc">
+                            <a href="#">{{link}}</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li class="title-list"><a href="#">titolo</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
+                        <div class="title-list">SITES</div>
+                        <li v-for="link in sites">
+                            <a href="#">{{link}}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -88,7 +106,8 @@
 
                     a {
                         text-decoration: none;
-                        color: white;
+                        color: gray;
+                        font-size: 10px;
                     }
                 }
             }
@@ -97,17 +116,19 @@
     
     .title-list {
         padding: 10px 0;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
         text-transform: uppercase;
-        font-size: 18px;
     }
     .big-logo {
-    width: 60%;
-    height: 100%;
-    text-align: center;
-    background-image: url(/src/assets/dc-logo-bg.png);
-    background-position-y: center;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-size: 400px;
-}
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        background-image: url(/src/assets/dc-logo-bg.png);
+        background-position-y: center;
+        background-position-x: right;
+        background-repeat: no-repeat;
+        background-size: 400px;
+    }
 </style>

@@ -1,6 +1,32 @@
 <script>
     export default {
-        name: 'TheBlackBanner'
+        name: 'TheBlackBanner',
+        data(){
+            return {
+                social: [
+                    {
+                        pre: '../assets/',
+                        name:'footer-pinterest.png'
+                    },
+                    {
+                        pre: '../assets/',
+                        name:'footer-facebook.png'
+                    },
+                    {
+                        pre: '../assets/',
+                        name:'footer-periscope.png'
+                    },
+                    {
+                        pre: '../assets/',
+                        name:'footer-twitter.png'
+                    },
+                    {
+                        pre: '../assets/',
+                        name:'footer-youtube.png'
+                    }
+                ]
+            }
+        }
     }
 </script>
 
@@ -10,11 +36,9 @@
             <button>SIGN-UP NOW</button>
             <div class="social flex">
                 <div class="follow">follow us</div>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#" v-for="element in social">
+                    <img :src='element.pre + element.name'>
+                </a>
             </div>
         </div>
     </div>
@@ -24,7 +48,7 @@
 @use '../styles/general.scss';
 
 .banner {
-    background-color: black;
+    background-color: #303030;
     height: 70px;
 
     .container {
@@ -54,17 +78,18 @@
     }
 
     .follow {
-    color: blue;
+    color: #0282f9;
     padding: 0 10px;
     text-transform: uppercase;
+    font-weight: bold;
     }
 }
 
 button{
     color: white;
-    border: 2px blue solid;
+    border: 2px #0282f9 solid;
     padding: 10px;
-    background-color: black;
+    background-color: #303030;
 }
 
 </style>
