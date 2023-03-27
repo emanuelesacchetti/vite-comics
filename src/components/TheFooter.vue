@@ -57,36 +57,44 @@
     .footer{
         height: 250px;
         background-image: url(../assets/footer-bg.jpg);
-    }
-    .container {
+
+        .container {
         display: flex;
         justify-content: space-between;
         height: 100%;
         width: 1000px;
         margin: auto;
+        }
+
+        .links {
+            width: 40%;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+        
+
+            div{
+                height: 100%;
+                width: calc(100% / 3);
+
+                ul{
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        list-style: none;
+                        font-size: 13px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
     }
-    .links {
-        width: 40%;
-        height: 100%;
-        padding: 10px;
-        display: flex;
-    }
-    .links div{
-        height: 100%;
-        width: calc(100% / 3);
-    }
-    .links div ul{
-        display: flex;
-        flex-direction: column;
-    }
-    .links div ul li {
-        list-style: none;
-        font-size: 13px;
-    }
-    .links ul a {
-        text-decoration: none;
-        color: white;
-    }
+    
     .title-list {
         padding: 10px 0;
         text-transform: uppercase;

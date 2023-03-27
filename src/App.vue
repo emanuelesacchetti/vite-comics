@@ -29,5 +29,6 @@
   main {
     height: calc(100vh - (250px + 70px + 70px));
     width: 100%;
+    background-color: black;
   }
 </style>

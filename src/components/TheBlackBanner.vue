@@ -26,12 +26,14 @@
 .banner {
     background-color: black;
     height: 70px;
-}
-.container {
+
+    .container {
     width: 1000px;
     margin: auto;
     height: 100%;
 }
+}
+
 .container.flex {
     display: flex;
     align-items: center;
@@ -41,20 +43,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.social a {
+
+    a {
     padding: 5px;
     margin: 0 10px;
     background-color: gray;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-}
-.follow {
+    }
+
+    .follow {
     color: blue;
     padding: 0 10px;
     text-transform: uppercase;
+    }
 }
+
 button{
     color: white;
     border: 2px blue solid;
