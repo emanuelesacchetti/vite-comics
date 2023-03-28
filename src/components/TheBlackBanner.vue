@@ -4,30 +4,20 @@
         data(){
             return {
                 social: [
-                    {
-                        pre: '../assets/',
-                        name:'footer-pinterest.png'
-                    },
-                    {
-                        pre: '../assets/',
-                        name:'footer-facebook.png'
-                    },
-                    {
-                        pre: '../assets/',
-                        name:'footer-periscope.png'
-                    },
-                    {
-                        pre: '../assets/',
-                        name:'footer-twitter.png'
-                    },
-                    {
-                        pre: '../assets/',
-                        name:'footer-youtube.png'
-                    }
+                'footer-pinterest.png',
+                'footer-facebook.png',
+                'footer-periscope.png',
+                'footer-twitter.png',
+                'footer-youtube.png'
                 ]
-            }
+            };
+        },
+        methods: {
+            getImagePat: function(img){
+            return new URL(`../assets/${img}`, import.meta.url) .href;
         }
     }
+}
 </script>
 
 <template>
@@ -37,7 +27,7 @@
             <div class="social flex">
                 <div class="follow">follow us</div>
                 <a href="#" v-for="element in social">
-                    <img :src='element.pre + element.name'>
+                    <img :src=getImagePat(element)>
                 </a>
             </div>
         </div>
@@ -68,13 +58,8 @@
     align-items: center;
     justify-content: center;
 
-    a {
-    padding: 5px;
-    margin: 0 10px;
-    background-color: gray;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    img {
+        margin: 0 10px;
     }
 
     .follow {

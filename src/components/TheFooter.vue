@@ -73,7 +73,7 @@
     @use '../styles/general.scss';
 
     .footer{
-        height: 250px;
+        height: 290px;
         background-image: url(../assets/footer-bg.jpg);
 
         .container {
