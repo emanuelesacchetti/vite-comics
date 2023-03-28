@@ -3,7 +3,8 @@
   import TheFooter from './components/TheFooter.vue';
   import TheBlackBanner from './components/TheBlackBanner.vue';
   import TheBlueBanner from './components/TheBlueBanner.vue';
-  import TheJumbotron from './components/TheJumbotron.vue'
+  import TheJumbotron from './components/TheJumbotron.vue';
+  import ProductList from './components/ProductList.vue';
 
   export default {
     components: {
@@ -11,7 +12,8 @@
       TheFooter,
       TheBlueBanner,
       TheBlackBanner,
-      TheJumbotron
+      TheJumbotron,
+      ProductList
     }
   }
 </script>
@@ -20,9 +22,9 @@
   <TheHeader></TheHeader>
   <main>
     <TheJumbotron></TheJumbotron>
-
+    <ProductList></ProductList>
   </main>
-  <TheBlueBanner></TheBlueBanner>
+  
   <TheFooter></TheFooter>
   <TheBlackBanner></TheBlackBanner>
 </template>
@@ -32,8 +34,6 @@
 
  
   main {
-    height: calc(100vh - (250px + 70px + 70px));
-    width: 100%;
     background-color: black;
   }
 </style>

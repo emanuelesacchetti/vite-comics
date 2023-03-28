@@ -1,5 +1,10 @@
 <script>
+    import TheBlueBanner from './TheBlueBanner.vue';
+
     export default {
+        components: {
+            TheBlueBanner
+        },
         name: 'TheFooter',
         data(){
             return {
@@ -29,6 +34,7 @@
 </script>
 
 <template>
+    <TheBlueBanner></TheBlueBanner>
     <footer class="footer">
         <div class="container">
             <div class="links">
