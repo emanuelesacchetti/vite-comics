@@ -77,17 +77,15 @@
 
 <style  lang="scss" scoped>
     @use '../styles/general.scss';
+    @use '../styles/partials/mixins';
 
     .footer{
         height: 290px;
         background-image: url(../assets/footer-bg.jpg);
 
         .container {
-        display: flex;
-        justify-content: space-between;
-        height: 100%;
-        width: 1000px;
-        margin: auto;
+        @include mixins.d-flex(space-between);
+        @include mixins.container;
         }
 
         .links {
@@ -112,7 +110,7 @@
 
                     a {
                         text-decoration: none;
-                        color: gray;
+                        color: rgb(100, 100, 100);
                         font-size: 10px;
                     }
                 }

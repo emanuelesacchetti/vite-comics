@@ -15,25 +15,26 @@
       TheJumbotron,
       ProductList
     }
-  }
+  } 
+  
 </script>
 
 <template>
-  <TheHeader></TheHeader>
+  <TheHeader />
   <main>
-    <TheJumbotron></TheJumbotron>
-    <ProductList></ProductList>
+    <TheJumbotron />
+    <ProductList />
   </main>
   
-  <TheFooter></TheFooter>
-  <TheBlackBanner></TheBlackBanner>
+  <TheFooter />
+  <TheBlackBanner />
 </template>
 
 <style lang="scss">
   @use './styles/general.scss';
 
- 
+
   main {
-    background-color: black;
+    background-color: #1c1c1c;
   }
 </style>

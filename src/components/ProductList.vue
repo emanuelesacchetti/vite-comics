@@ -98,7 +98,7 @@
             </div>
 
         </div>
-        <div class="flex">
+        <div class="btn-wrap">
             <button class="btn"><a href="#">LOAD MORE</a></button>
         </div>
 
@@ -107,29 +107,24 @@
 
 
 <style lang="scss" scoped>
+    @use '../styles/partials/variables' as *;
+    @use '../styles/partials/mixins';
     .container {
-        width: 1000px;
-        margin: auto;
+        @include mixins.container;
+        @include mixins.d-flex;
         padding: 50px 0;
-        height: 100%;
-    }
-    .flex{
-        display: flex;
-        flex-wrap: wrap;
     }
     .box{
         width: calc(100% / 6);
         padding: 10px;
         height: 280px;
     }
-    .flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .btn-wrap {
+        @include mixins.d-flex;
     }
     .btn{
         padding: 10px 60px;
-        background-color: #0282f9;
+        background-color: $color-secondary;
         border: none;
         margin: 20px auto;
 

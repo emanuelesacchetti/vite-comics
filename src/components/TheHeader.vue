@@ -23,7 +23,7 @@
 
 <template>
     <header>
-        <div class="container flex-center-between">
+        <div class="cont">
             <img src="../assets/dc-logo.png" alt="logo DC">
             <nav>
                 <ul>
@@ -39,24 +39,18 @@
 <style  lang="scss" scoped>
     @use '../styles/general.scss';
     @use '../styles/partials/mixins';
+    @use '../styles/partials/variables' as *;
     
     header {
         background-color: white;
         height: 70px;
 
-        .container{
-        width: 1000px;
-        margin: auto;
-        height: 70px;
-        }
-        .flex-center-between {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        .cont{
+            @include mixins.container;
+            @include mixins.d-flex(space-between);
         }
     }
-    
-    
+     
     img{
         height: 50px;
     }
@@ -73,21 +67,18 @@
             li {
             padding: 0 10px;
             height: 100%;
-            display: flex;
-            align-items: center;
+            @include mixins.d-flex;
             border-bottom: 3px solid antiquewhite;
 
                 &:hover {
-                border-bottom: 3px solid blue;
+                border-bottom: 3px solid $color-secondary;
                 }
-
                     &:hover a {
-                        color: blue;
+                        color: $color-secondary;
                     }
-
                 a {
                 text-decoration: none;
-                color: black;
+                color: $color-bg-dark;
                 text-transform: uppercase;
                 font-size: 12px;
                 }

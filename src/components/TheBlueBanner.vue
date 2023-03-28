@@ -33,7 +33,7 @@
 
 <template>
     <div class="blue-banner">
-        <div class="container flex">
+        <div class="container">
             <div class="item flex" v-for="element in buy">
                 <img :src=getImagePat(element.img)>
                 <div class="text">{{ element.text }}</div>
@@ -44,22 +44,22 @@
 
 <style  lang="scss" scoped>
     @use '../styles/general.scss';
-    
+    @use '../styles/partials/variables' as *;
+    @use '../styles/partials/mixins';
 
     .blue-banner{
         height: 130px;
-        background-color: #0282f9;
+        background-color: $color-secondary;
         color: white;
 
         .container{
-        width: 1000px;
-        margin: auto;
-        height: 100%;
+        @include mixins.container;
+        @include mixins.d-flex;
         }
-
         .item{
             height: 50px;
             margin: 0 20px;
+            @include mixins.d-flex;
 
             img{
                 height: 100%;
@@ -68,11 +68,6 @@
                 margin: 0 10px;
             }
         }
-    }
-    .flex{
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
 </style>

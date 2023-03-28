@@ -1,5 +1,12 @@
-.flex-center {
+@mixin d-flex($justify-content:center,$wrap:wrap) {
     display: flex;
+    justify-content: $justify-content;
     align-items: center;
-    justify-content: center;
+    flex-wrap: $wrap;
 }
+
+@mixin container{
+    width: 1000px;
+    margin: auto;
+    height: 100%;
+    }

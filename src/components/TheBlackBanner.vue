@@ -36,34 +36,26 @@
 
 <style  lang="scss" scoped>
 @use '../styles/general.scss';
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins';
 
 .banner {
-    background-color: #303030;
+    background-color: $color-bg-dark;
     height: 70px;
 
     .container {
-    width: 1000px;
-    margin: auto;
-    height: 100%;
+    @include mixins.container;
+    @include mixins.d-flex(space-between);
 }
 }
-
-.container.flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.social.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.social {
+    @include mixins.d-flex;
 
     img {
         margin: 0 10px;
     }
-
     .follow {
-    color: #0282f9;
+    color: $color-secondary;
     padding: 0 10px;
     text-transform: uppercase;
     font-weight: bold;
@@ -72,9 +64,9 @@
 
 button{
     color: white;
-    border: 2px #0282f9 solid;
+    border: 2px $color-secondary solid;
     padding: 10px;
-    background-color: #303030;
+    background-color: $color-bg-dark;
 }
 
 </style>
