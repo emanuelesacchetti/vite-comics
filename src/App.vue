@@ -3,20 +3,25 @@
   import TheFooter from './components/TheFooter.vue';
   import TheBlackBanner from './components/TheBlackBanner.vue';
   import TheBlueBanner from './components/TheBlueBanner.vue';
+  import TheJumbotron from './components/TheJumbotron.vue'
 
   export default {
     components: {
       TheHeader,
       TheFooter,
       TheBlueBanner,
-      TheBlackBanner
+      TheBlackBanner,
+      TheJumbotron
     }
   }
 </script>
 
 <template>
   <TheHeader></TheHeader>
-  <main></main>
+  <main>
+    <TheJumbotron></TheJumbotron>
+
+  </main>
   <TheBlueBanner></TheBlueBanner>
   <TheFooter></TheFooter>
   <TheBlackBanner></TheBlackBanner>
